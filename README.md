@@ -12,4 +12,4 @@ https://liuyfab.github.io/password-generator/
 https://github.com/liuyfab/password-generator
 
 # Screenshot
-![Landing Page](https://github.com/liuyfab/password-generator/blob/main/Assets/Screenshot.pngraw=true)
+![Landing Page](https://github.com/liuyfab/password-generator/blob/main/Assets/Screenshot.png?raw=true)
