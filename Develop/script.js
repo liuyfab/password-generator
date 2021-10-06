@@ -15,10 +15,10 @@ function chooseCriteria() {
 
   // if(passwordLength >= 8 || <=128)  create confirm for specialChar,numeric,lowercase,uppercase.
   
-  var specialChar = window.confirm ("Would you like to include special characters?") 
-  var numeric = window.confirm ("Would you like to include numeric characters?")
-  var lowerCase = window.confirm ("Would you like to inclue lower case characters?")
-  var upperCase = window.confirm ("Would you like to include upper case characters?")
+  var specialChar = window.confirm ("Do you want special characters?") 
+  var numeric = window.confirm ("Do you want numeric characters?")
+  var lowerCase = window.confirm ("Do you want lower case letters?")
+  var upperCase = window.confirm ("Do you want upper case letters?")
   console.log(specialChar)
 
   if (specialChar === false && numeric === false && lowerCase === false && upperCase === false) {
