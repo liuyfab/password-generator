@@ -52,7 +52,7 @@ function generatePassword() {
   var finalResult = []
   var possibleChar = []
   var guaranteeChar = []
-  if(choices.special) {
+  if(choices.special) {  
     possibleChar= possibleChar.concat(specialCharArray);
     guaranteeChar.push(random(specialCharArray));
   }
