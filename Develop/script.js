@@ -1,9 +1,10 @@
-
+// generate specialChar, number, lowercase, uppercase arrays.
 var specialCharArray=["!", "#", "%", "&", "(", ")", "[", "]", "{", "}", ".", ";", ":", "*", "-", "+", "/", "=", "\\", "?","'","~","_"];
 var numberArray=["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 var lowerCaseArray=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ]
 var upperCaseArray=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 
+// choose criteria.
 function chooseCriteria() {
   var passwordLength=parseInt(window.prompt ("Choose your password length: \nbetween 8 and 128 characters?"))
   console.log(passwordLength)
@@ -45,14 +46,15 @@ function random (arr) {
 }
 console.log(random(upperCaseArray))
 
+// generating a complete password.
 function generatePassword() {
   var choices = chooseCriteria()
   var finalResult = []
   var possibleChar = []
   var guaranteeChar = []
   if(choices.special) {
-    possibleChar= possibleChar.concat(specialCharArray)
-    guaranteeChar.push(random(specialCharArray))
+    possibleChar= possibleChar.concat(specialCharArray);
+    guaranteeChar.push(random(specialCharArray));
   }
   if(choices.lower) {
     possibleChar= possibleChar.concat(lowerCaseArray)
@@ -67,14 +69,18 @@ function generatePassword() {
     guaranteeChar.push(random(numberArray))
   }
 
+  //possibleChar combines all arrays based on the cofirm  
   for(var i = 0; i < choices.length; i++) {
     var character = random(possibleChar)
     finalResult.push(character)
   }
-
+ 
+  //guarantee at least one choice based on confirm box from the selector
   for(var i = 0; i < guaranteeChar.length; i++) {
     finalResult[i] = guaranteeChar[i]
   }
+  
+ // join the guaranteed char with the randomly choosed password
   return finalResult.join("")
 
 }
